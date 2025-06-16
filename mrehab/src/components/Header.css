@@ -1,0 +1,92 @@
+/* --- Header Container --- */
+.main-header {
+    position: fixed; /* Makes the header stick to the top of the viewport even on scroll */
+    /* Alternatively, use 'absolute' if you only want it to sit on top of the first section: */
+    /* position: absolute; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure it's always on top of other content */
+    background-color: rgba(0, 0, 0, 0); /* Fully transparent background */
+    /* Or a slight transparent tint like the example: */
+    /* background-color: rgba(0, 0, 0, 0.3); */ /* Black with 30% opacity */
+    padding: 20px 0; /* Vertical padding, horizontal handled by container */
+    transition: background-color 0.3s ease; /* Smooth transition for potential background change on scroll */
+}
+
+/* Optional: Make header opaque on scroll (advanced) */
+/* You'd need JavaScript/React to add a class like 'scrolled' to .main-header */
+/* .main-header.scrolled {
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+} */
+
+/* --- Header Inner Container for Content Alignment --- */
+.header-container {
+    max-width: 1200px; /* Max width of your header content (adjust as needed) */
+    margin: 0 auto; /* Center the content */
+    padding: 0 20px; /* Horizontal padding for responsiveness */
+    display: flex;
+    justify-content: space-between; /* Space out logo, nav, and right elements */
+    align-items: center; /* Vertically align items */
+    color: white; /* Default text color for the header */
+}
+
+/* --- Logo Styles --- */
+.header-logo .logo-image {
+    height: 40px; /* Adjust logo size */
+    width: auto;
+    display: block; /* Remove extra space below image */
+}
+
+.header-logo span {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+.header-logo a {
+    text-decoration: none;
+    color: inherit; /* Inherit color from parent (.header-container) */
+}
+
+/* --- Navigation Styles --- */
+.header-nav ul {
+    list-style: none; /* Remove bullet points */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Arrange links horizontally */
+    gap: 30px; /* Space between nav items */
+}
+
+.header-nav a {
+    text-decoration: none;
+    color: white; /* Nav link color */
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.header-nav a:hover {
+    color: #00bcd4; /* Example hover color (light blue) */
+}
+
+/* --- Right Side Elements (Buttons, Search, etc.) --- */
+.header-right {
+    display: flex;
+    gap: 15px;
+}
+
+.header-button {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.header-button:hover {
+    background-color: white;
+    color: #333;
+}
