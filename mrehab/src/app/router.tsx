@@ -5,7 +5,6 @@ import Header from '../components/Header';
 import Landing from './pages/landing';
 const AppRouter: React.FC = () => (
     <Router>
-        <Header />
         <Routes>
             <Route path="/" element={<Landing />} />
         </Routes>
