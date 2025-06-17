@@ -20,17 +20,17 @@ const Landing: React.FC = () => {
 
       <section className="landing-features">
         <div className="feature">
-          <img src="/icons/ai-icon.svg" alt="AI Icon" />
+          <img src="/icons/ai.png" alt="AI Icon" />
           <h3>AI-Guided Recovery</h3>
           <p>Real-time feedback and adaptive routines customized to your progress.</p>
         </div>
         <div className="feature">
-          <img src="/icons/3dprint-icon.svg" alt="3D Print Icon" />
+          <img src="/icons/3dprint.png" alt="3D Print Icon" />
           <h3>3D-Printed Tools</h3>
           <p>Personalized rehab devices for just $15—designed for everyday use.</p>
         </div>
         <div className="feature">
-          <img src="/icons/cloud-icon.svg" alt="Cloud Icon" />
+          <img src="/icons/cloud.png" alt="Cloud Icon" />
           <h3>Remote Monitoring</h3>
           <p>Clinicians track recovery data seamlessly, enabling better outcomes.</p>
         </div>
