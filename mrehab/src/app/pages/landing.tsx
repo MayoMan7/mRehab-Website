@@ -1,68 +1,56 @@
-import React, { useEffect, useState } from 'react';
-import './landing.css'; // Make sure this CSS file is in the same directory as Landing.tsx
-import ExpandableText from '../../components/ExpandableText';
+import React from 'react';
+import './landing.css';
 import Header from '../../components/Header';
+import { Link } from 'react-router-dom';
 
 const Landing: React.FC = () => {
-
-  const carouselImages = [
-    "/landing_slideshow/stroke-rehab-1024x683.jpg",
-    "/landing_slideshow/images.jpeg",
-    "/landing_slideshow/FEVYQkbb-aFr7tOnSgYFQTmgxun_W7-g.gif",
-  ];
-
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % carouselImages.length);
-    }, 19000); // change image every 5 seconds
-
-    return () => clearInterval(interval);
-  }, []);
-
   return (
     <>
-            <Header />
-
-      {/* This div will serve as your full-screen hero section */}
-      <div className="carousel">
-        {carouselImages.map((src, index) => (
-          <img
-            key={index}
-            src={src}
-            alt={`Slide ${index + 1}`}
-            className={`carousel-slide ${index === currentIndex ? 'active' : ''}`}
-          />
-        ))}
-
-        <div className="carousel-content">
-          <h1 className="carousel-title">In-Home Stroke Rehabilitation</h1>
-          <p className="carousel-subtitle">
-            combining AI and 3D printing to deliver personalized rehabilitation solutions
-          </p>
+      <Header />
+      <div className="landing-hero">
+        <video autoPlay loop muted playsInline className="hero-video">
+          <source src="/videos/rehab-motion.mp4" type="video/mp4" />
+        </video>
+        <div className="hero-overlay">
+          <h1>Revolutionizing Stroke Rehab</h1>
+          <p>AI-driven therapy meets affordable 3D-printed recovery tools—all from home.</p>
+          <Link to="/technologies/mobileapp" className="cta-button">Explore the App</Link>
         </div>
       </div>
 
-      {/* The rest of your website content starts here, below the full-screen hero */}
-      <div className="main-page-content">
-        <div className='prod-info-container'>
-          <div className='prod-info-text'>
-            <h2 className='prod-info-title'>mRehab in home rehab system</h2>
-            <ExpandableText title="Smart Phone App" content="mRehab leverages cutting-edge AI and 3D printing to provide personalized, in-home rehabilitation solutions for stroke survivors." />
-            <ExpandableText title="Individualized Hardware" content="mRehab leverages cutting-edge AI and 3D printing to provide personalized, in-home rehabilitation solutions for stroke survivors." />
-            <ExpandableText title="AI Powered Feedback" content="mRehab leverages cutting-edge AI and 3D printing to provide personalized, in-home rehabilitation solutions for stroke survivors." />
-          </div>
-
-          <div className='prod-info-image'>
-            <img src='/kupa11.png' alt='mRehab Hardware' />
-          </div>
+      <section className="landing-features">
+        <div className="feature">
+          <img src="/icons/ai-icon.svg" alt="AI Icon" />
+          <h3>AI-Guided Recovery</h3>
+          <p>Real-time feedback and adaptive routines customized to your progress.</p>
         </div>
-
-        <div className='effectivity-claim'> 
-          <h1>Improves Motor Control By 30%</h1>
+        <div className="feature">
+          <img src="/icons/3dprint-icon.svg" alt="3D Print Icon" />
+          <h3>3D-Printed Tools</h3>
+          <p>Personalized rehab devices for just $15—designed for everyday use.</p>
         </div>
-      </div>
+        <div className="feature">
+          <img src="/icons/cloud-icon.svg" alt="Cloud Icon" />
+          <h3>Remote Monitoring</h3>
+          <p>Clinicians track recovery data seamlessly, enabling better outcomes.</p>
+        </div>
+      </section>
+
+      <section className="impact-section">
+        <h2>Why It Matters</h2>
+        <p>Stroke survivors need more than routines—they need motivation, visibility, and tools that actually fit their lives. mRehab delivers just that.</p>
+        <div className="stats">
+          <div><h3>+30%</h3><p>Improvement in motor control</p></div>
+          <div><h3>10x</h3><p>Cheaper than traditional rehab kits</p></div>
+          <div><h3>92%</h3><p>User satisfaction with visual progress</p></div>
+        </div>
+      </section>
+
+      <section className="cta-section">
+        <h2>Start Your Recovery Journey</h2>
+        <p>Discover how mRehab brings hospital-grade therapy into your living room.</p>
+        <Link to="/contact" className="cta-button">Get In Touch</Link>
+      </section>
     </>
   );
 };

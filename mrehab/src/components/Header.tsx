@@ -1,32 +1,44 @@
-// src/components/Header.tsx
-import React from 'react';
-import './Header.css'; // Create this CSS file for header styling
-import { Link } from 'react-router-dom'; // For navigation links
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import './Header.css';
 
 const Header: React.FC = () => {
-  return (
-    <header className="main-header">
-      <div className="header-container">
-        {/* Logo Section */}
-        <div className="header-logo">
-          <Link to="/">
-            {/* Replace with your actual logo. You might need to import it if from src/assets */}
-            {/* <img src="/your-logo.png" alt="Your Company Logo" className="logo-image" /> */}
-            {/* Or simply text */}
-            <span>mRehab</span>
-          </Link>
-        </div>
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-        {/* Optional: Right-side elements like search, login, etc. */}
-        <div className="header-right">
-           <nav className="header-nav">
-          <ul>
-            <li><Link to="/about">About</Link></li>
-            <li><Link to="/technologies">Technologies</Link></li>
-            <li><Link to="/contact">Contact</Link></li>
-            {/* Add more links as needed */}
-          </ul>
+  return (
+    <header className="mrehab-header">
+      <div className="header-container">
+        <Link to="/" className="logo">
+          <span>mRehab</span>
+        </Link>
+
+        <nav className={`nav-links ${isMobileMenuOpen ? 'open' : ''}`}>
+          <Link to="/why-it-matters">Why It Matters</Link>
+          <Link to="/contact">Contact</Link>
+
+          <div className="dropdown">
+            <span
+              className="dropdown-toggle"
+              onClick={() => setIsDropdownOpen((prev) => !prev)}
+            >
+              Technologies ▾
+            </span>
+            {isDropdownOpen && (
+              <div className="dropdown-menu" onMouseLeave={() => setIsDropdownOpen(false)}>
+                <Link to="/technologies/mobileapp" onClick={() => setIsDropdownOpen(false)}>Mobile App</Link>
+                <Link to="/technologies/3dprinting" onClick={() => setIsDropdownOpen(false)}>3D Printing</Link>
+                <Link to="/technologies/ai" onClick={() => setIsDropdownOpen(false)}>AI</Link>
+              </div>
+            )}
+          </div>
         </nav>
+
+        <div
+          className="mobile-toggle"
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        >
+          ☰
         </div>
       </div>
     </header>
