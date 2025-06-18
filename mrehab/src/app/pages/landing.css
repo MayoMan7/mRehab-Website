@@ -119,7 +119,8 @@ body {
 .cta-section {
   text-align: center;
   padding: 4rem 2rem;
-  background-color: var(--color-pink-muted);
+  background: linear-gradient(to right, var(--color-main), var(--color-main-hover));
+  color: white;
 }
 
 .cta-section h2 {

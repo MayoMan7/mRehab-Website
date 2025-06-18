@@ -46,6 +46,10 @@ const Landing: React.FC = () => {
         </div>
       </section>
 
+      <div>
+        
+      </div>
+
       <section className="cta-section">
         <h2>Start Your Recovery Journey</h2>
         <p>Discover how mRehab brings hospital-grade therapy into your living room.</p>

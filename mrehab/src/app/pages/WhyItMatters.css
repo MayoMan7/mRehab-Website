@@ -156,3 +156,27 @@
 .why-cta p {
   font-size: 1.2rem;
 }
+
+.why-cta-button {
+  background-color: var(--color-white);
+  color: var(--color-main);
+  padding: 0.9rem 1.8rem;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  border: 2px solid var(--color-white);
+  cursor: pointer;
+  transition: 
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border 0.3s ease,
+    transform 0.3s ease;
+}
+
+.why-cta-button:hover {
+  background-color: var(--color-white);
+  color: var(--color-main-hover);
+  transform: scale(1.10);
+}
+

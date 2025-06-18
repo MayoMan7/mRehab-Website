@@ -1,6 +1,8 @@
 import React from 'react';
 import Header from '../../components/Header';
 import './WhyItMatters.css';
+import { Link } from 'react-router-dom';
+
 
 const WhyItMatters: React.FC = () => {
   return (
@@ -73,6 +75,7 @@ const WhyItMatters: React.FC = () => {
       <section className="why-cta">
         <h2>We’re not just building an app. We’re rebuilding access to recovery.</h2>
         <p>Join us in making stroke rehab smarter, cheaper, and more human.</p>
+        <Link to="/contact" className="why-cta-button">Get In Touch</Link>
       </section>
     </div>
   );
