@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;600&display=swap');
+@import url('../../colors.css');
 
 body {
   font-family: 'Titillium Web', sans-serif;
   margin: 0;
   padding: 0;
-  background: #fff;
-  color: #1b1f23;
+  background: var(--color-white);
+  color: var(--color-text-dark);
 }
 
 .landing-hero {
@@ -33,7 +34,7 @@ body {
   justify-content: center;
   align-items: center;
   background: rgba(0, 0, 0, 0.5);
-  color: white;
+  color: var(--color-white);
   padding: 2rem;
   text-align: center;
 }
@@ -50,8 +51,8 @@ body {
 }
 
 .cta-button {
-  background-color: #00b4d8;
-  color: white;
+  background-color: var(--color-main);
+  color: var(--color-white);
   padding: 0.9rem 1.8rem;
   font-weight: 600;
   font-size: 1rem;
@@ -61,7 +62,7 @@ body {
 }
 
 .cta-button:hover {
-  background-color: #007ea7;
+  background-color: var(--color-main-hover);
 }
 
 .landing-features {
@@ -69,7 +70,7 @@ body {
   justify-content: space-around;
   text-align: center;
   padding: 4rem 2rem;
-  background-color: #f9f9f9;
+  background-color: var(--color-gray-light);
 }
 
 .feature {
@@ -83,7 +84,7 @@ body {
 
 .feature h3 {
   font-size: 1.5rem;
-  color: #005dff;
+  color: var(--color-main);
 }
 
 .impact-section {
@@ -105,14 +106,14 @@ body {
 
 .stats div h3 {
   font-size: 2.5rem;
-  color: #00b4d8;
+  color: var(--color-main);
   margin-bottom: 0.5rem;
 }
 
 .cta-section {
   text-align: center;
   padding: 4rem 2rem;
-  background-color: #eef7ff;
+  background-color: var(--color-pink-muted);
 }
 
 .cta-section h2 {
