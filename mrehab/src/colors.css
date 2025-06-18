@@ -1,0 +1,17 @@
+:root {
+  /* Primary Colors */
+  --color-main: #ab0060;
+  --color-main-hover: #e60583;
+  --color-pink-muted: #ffb0d6;
+
+  /* Neutral Colors */
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-gray-light: #f1f1f5;
+  --color-text-dark: #1b1f23;
+  --color-text-muted: #6a6a6a;
+
+  /* Accent Colors */
+  --color-accent-blue: #00b4d8;
+  --color-accent-purple: #d8b4d8;
+}
