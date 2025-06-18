@@ -1,0 +1,91 @@
+/* --- Header Container --- */
+.main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0); /* Transparent by default */
+  padding: 20px 0;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.main-header.scrolled {
+  background-color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.main-header.scrolled .header-nav a,
+.main-header.scrolled .header-logo span {
+  color: #1a1a1a; /* Dark text when background is white */
+}
+
+/* --- Header Inner Container for Content Alignment --- */
+.header-container {
+    max-width: 1200px; /* Max width of your header content (adjust as needed) */
+    margin: 0 auto; /* Center the content */
+    padding: 0 20px; /* Horizontal padding for responsiveness */
+    display: flex;
+    justify-content: space-between; /* Space out logo, nav, and right elements */
+    align-items: center; /* Vertically align items */
+    color: white; /* Default text color for the header */
+}
+
+/* --- Logo Styles --- */
+.header-logo .logo-image {
+    height: 40px; /* Adjust logo size */
+    width: auto;
+    display: block; /* Remove extra space below image */
+}
+
+.header-logo span {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+.header-logo a {
+    text-decoration: none;
+    color: inherit; /* Inherit color from parent (.header-container) */
+}
+
+/* --- Navigation Styles --- */
+.header-nav ul {
+    list-style: none; /* Remove bullet points */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Arrange links horizontally */
+    gap: 30px; /* Space between nav items */
+}
+
+.header-nav a {
+    text-decoration: none;
+    color: white; /* Nav link color */
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.header-nav a:hover {
+    color: #00bcd4; /* Example hover color (light blue) */
+}
+
+/* --- Right Side Elements (Buttons, Search, etc.) --- */
+.header-right {
+    display: flex;
+    gap: 15px;
+}
+
+.header-button {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.header-button:hover {
+    background-color: white;
+    color: #333;
+}
