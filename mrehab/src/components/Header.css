@@ -42,12 +42,13 @@
 
 .nav-links a:hover,
 .dropdown-toggle:hover {
-  color: var(--color-accent-blue);
+  color: var(--color-main-hover);
 }
 
 /* Dropdown menu */
 .dropdown {
-  position: relative;
+  position: relative; 
+  cursor: pointer;
 }
 
 .dropdown-menu {

@@ -4,8 +4,9 @@ import Header from '../../components/Header';
 
 const TechnologiesMobileApp: React.FC = () => {
   return (
+    <>
+    <Header></Header>
     <div className="tech-page">
-    <Header />
       <section className="tech-hero">
         <h1>mRehab Mobile App</h1>
         <p>Smart, personalized stroke rehabilitation—right from your phone.</p>
@@ -49,6 +50,8 @@ const TechnologiesMobileApp: React.FC = () => {
         <div className="tech-image placeholder-image">Image Placeholder</div>
       </section>
     </div>
+    </>
+
   );
 };
 
